@@ -32,8 +32,6 @@ Route::get('finder/vote', 'FinderController@vote')->name('finder.vote');//->midd
 // })->name('home')->middleware('auth');
 Route::group(['middleware' => ['auth']], function () { //  'verified',
     Route::get('/home', 'HomeController@index')->name('home');//->middleware(['role:admin']);
-    Route::get('reload', 'HomeController@reload')->name('reload');//->middleware(['role:admin']);
-    Route::get('reload-status', 'HomeController@reloadStatus')->name('reload_status');//->middleware(['role:admin']);
     
     // Role Menu
     Route::get('role', 'RolesController@index')->name('role');
